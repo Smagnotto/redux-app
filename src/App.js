@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { clickButton } from './actions';
 import './App.css';
 
+import { Title } from './component/Title'
+
 class App extends Component {
   state = {
     inputValue: ''
@@ -24,7 +26,7 @@ class App extends Component {
         <button onClick={() => clickButton(inputValue)}>
           Click me!
         </button>
-        <h1>{newValue}</h1>
+        <Title title={ newValue } />
       </div>
     );
   }
